@@ -1,0 +1,363 @@
+body {
+  background-color: #004AAD;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  transition: all 1s;
+}
+
+
+nav {
+  width: 100%;
+  box-shadow: 0 0 10px 2px #fff;
+  background-color: #001c73;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: none;
+  list-style: none;
+  width: 40px;
+  gap: 5px;
+}
+
+nav ul li a:hover{
+  color: #2bcd06;
+  transition: all 1s;
+}
+
+nav ul li a {
+  color: aqua;
+  text-decoration: none;
+}
+
+.nama {
+  justify-content: flex-start;
+}
+
+.nama a {
+  width: 104px;
+  text-decoration: none;
+  color: white;
+}
+
+.Pengertian {
+  color: white;
+}
+
+.gambar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 150px;
+  top: 200px;
+  background-color: #f1f4ff;
+  border-radius: 3px;
+  z-index: -2;
+  box-shadow: 0 0 100px 100px #30c8ff;
+}
+
+
+#gambar img{
+  width: 200px;
+  height: 200px;
+}
+#Pengertian h4 {
+  color: white;
+  position: relative;
+  top: 140px;
+  right: -50px;
+  font-size: 21px;
+}
+
+
+
+#Pengertian p {
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: -50px;
+  top: 140px;
+  color: white;
+}
+
+#Sejarah{
+  width: 100%;
+  height:600px;
+  position: relative;
+  top: 200px;
+  justify-content: center;
+  align-items: center;
+  background-color: #0269f0;
+  color: white;
+}
+
+#Sejarah h4{
+  position: absolute;
+  right: 30%;
+}
+
+#Sejarah p{
+  position: absolute;
+  top: 40px;
+  right: 400px;
+  width: 40%;
+  text-align: center;
+}
+
+.gambar2{
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  right: 180px;
+  top: 50px;
+  background-color: #ecf2fa;
+  box-shadow: 0 0 220px 40px rgb(184, 203, 182);
+}
+
+#Jenis{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 410px;
+  position: absolute;
+  top: 780px;
+  background-color: #001c73;
+}
+
+#Jenis p{
+  position: absolute;
+  font-size: 15px;
+  justify-content: center;
+  top: 50px;
+  text-align: center;
+}
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  right: 0;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 48px;
+  height: 28px;
+  top: -7px;
+  left: -15px;
+  opacity: 0.0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  transition: all 1s;
+  z-index: 1;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+
+.menu-toggle input:checked~span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:last-child {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+  transform: scale(0);
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40vh;
+  flex-direction: column;
+  background-color: #001c73;
+  width: 40%;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  transform: translatex(100%);
+  transition: all 1s;
+  border-radius: 10px;
+
+}
+
+
+nav {
+  height: 40px;
+}
+
+.menu-toggle {
+  display: flex;
+}
+
+nav ul.slide {
+  transform: translateX(0);
+}
+#Contoh{
+  width: 100%;
+  height: 350px;
+  background-color: #073098;
+  position: absolute;
+  top: 1200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  
+}
+
+#Contoh img{
+  width: 150px;
+  height: 150px;
+  border: 10px 10px 0 0 white;
+}
+/* .foto{
+  width: 90%;
+  height: 90%;
+  background-color: #0040ff
+ display: flex;
+ position: absolute;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+@media only screen and (max-width: 500px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40vh;
+    flex-direction: column;
+    background-color: #001c73;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    transform: translatex(100%);
+    transition: all 0.5s;
+    border-radius: 10px;
+  }
+  #Contoh{
+    position: absolute;
+    top: 2600px;
+    height: 900px;
+  }
+  nav {
+    height: 40px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul.slide {
+    transform: translateX(0);
+  }
+
+  #Pengertian h4{
+    position: relative;
+    top: 90px;
+    z-index: 0;
+  }
+
+  #gambar{
+    position: absolute;
+    top: -00px;
+  }
+  #Pengertian p{
+    position: relative;
+    top: 300px;
+    right: -70px;
+  }
+
+  #Sejarah p{
+    position: absolute;
+    right: 100px;
+    top: 250px;
+    width: 60%;
+  }
+
+  #Sejarah{
+    position: absolute;
+    top: 750px;
+    height: 1100px;
+  }
+
+  .gambar2{
+    right: 140px;
+  }
+
+  #Jenis{
+    position: absolute;
+    top: 1800px;
+    height:850px;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  #Sejarah{
+    height: 360px;
+  }
+  #Sejarah p{
+    position: absolute;
+    left: 40px;
+  }
+
+  .gambar2 {
+    position: absolute;
+    left: 650px;
+    top: 90px;
+  }
+
+  #Sejarah h4{
+    font-size: 20px;
+  }
+}
+
+footer{
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  background-color: red;
+}
+
+footer p{
+  position: relative;
+  top: -15px;
+}
+
